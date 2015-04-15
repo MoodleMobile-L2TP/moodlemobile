@@ -1,0 +1,95 @@
+﻿/*My Style*/
+.count-notifications {
+    font-size: 12px;
+    float: right;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+.notify{
+    border-bottom: 1px solid #CDCDCD;
+    font-size: 10pt;
+}
+
+.notify a{
+    color: #666666;
+}
+
+.notify a div{
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+}
+
+.notify a div:hover{
+    background-color: #DDDDDD;
+}
+
+.subject-alert{
+    font-weight: bold;
+    border-bottom: 1px solid #CDCDCD;
+}
+
+.notification-viewed{
+    color: green;
+    font-style: italic;
+}
+
+.notification-notview{
+    color: orange;
+    font-style: italic;
+}
+
+#mask{
+background: #000000; 
+position: fixed; 
+left: 0; 
+top: 0; 
+width: 100%; 
+height: 100%;
+opacity: 0.2;
+z-index: 9999;
+}
+
+.menu-mask{
+    position: absolute;
+    background-color: #FA8F1C;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 999;
+}
+
+.plugin-hidden{
+    display: none;
+}
+
+.text-full-width{
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #CDCDCD;
+}
+
+#postnews-template{
+    width: 90%;
+    margin: 0px auto;
+    padding: 5px;
+}
+
+#postnews-template div{
+    padding: 3px;
+}
+
+#postnews-template button{
+    width: 40%;
+}
+
+.req{
+    color: #EE0000;
+}

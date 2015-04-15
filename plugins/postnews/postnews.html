@@ -1,0 +1,12 @@
+<div class="panel-container">
+    <div id="postnews-template">
+        <div>Subject:<span class="req">*</span></div>
+        <div><textarea id="subject" rows="2" style="color: #000000; resize: vertical;"></textarea></div>
+        <div>Message:<span class="req">*</span></div>
+        <div><textarea id="message" rows="8" style="color: #000000; resize: vertical;"></textarea></div>
+        <div style="text-align: center; margin-top: 10px;">
+            <a href="#postnews/post/<%= courseId %>"><button><%= MM.lang.s("post") %></button></a>
+            <a href="#" onclick="MM.plugins.postnews.cancel();"><button><%= MM.lang.s("cancel") %></button></a>
+        </div>
+    </div>
+</div>

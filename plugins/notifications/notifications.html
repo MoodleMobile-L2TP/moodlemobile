@@ -1,0 +1,35 @@
+<% if(data.length > 0 && data[0].timemodified != 0){ %>
+<div id="panel-notifications" class="panel-container">
+    <% _.each(data, function(item){ %>
+    <div class="notify">
+        <% if(item.objecttable == "forum_discussions"){ %>
+        <a href="#forum/discussion/<%= item.courseid %>/<%= item.id %>">
+            <div>
+                <b style="color: #6699FF;"><%= item.username %></b>
+                <span>&nbsp;<%= MM.lang.s("havecreatedanewsin") %>&nbsp;</span>
+        <% } else if(item.objecttable == "assign_grades"){ %>
+        <a href="#course/grades/<%= item.courseid %>" >
+            <div>
+                <b style="color: #6699FF;"><%= item.username %></b>
+                <span>&nbsp;<%= MM.lang.s("haveupdatedgradein") %>&nbsp;</span>
+        <% } %>
+                <b style="color: #6699FF;"><%= item.coursename %></b><br />
+                <span style="font-size: 9pt;"><%= MM.util.timestampToUserDate(item.timemodified) %>&nbsp;&nbsp;&nbsp;</span>
+                <% if(item.status == "none"){ %>
+                <span class="notification-notview"><%= MM.lang.s("notview") %></span>
+                <% } %>
+            </div>
+        </a>
+    </div>
+    <% }) %>
+    <% if(showAll){ %>
+    <div class="centered">
+        <a href="#notifications/viewall"><button><%= MM.lang.s("viewall") %></button></a>
+    </div>
+    <% } %>
+</div>
+<% } else { %>
+<p style="font-weight: bold; padding: 10px; text-align: center;">
+    <%= MM.lang.s("therearentnotificationsyet") %>
+</p>
+<% } %>
